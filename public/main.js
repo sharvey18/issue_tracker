@@ -59,7 +59,7 @@ function deleteIssue (id) {
   fetchIssues();
 }
 
-function fetchIssues() {
+function fetchIssues () {
   var issues = JSON.parse(localStorage.getItem('issues'));
   var issuesList = document.getElementById('issuesList');
 
@@ -72,15 +72,14 @@ function fetchIssues() {
     var assignedTo = issues[i].assignedTo;
     var status = issues[i].status;
 
-    issuesList.innerHTML += '<div class="well">' +
-                            '<h6>Issue ID: ' + id + '</h6>' +
-                            '<p><span label="label label-info">' + status + '</span></p>' +
-                            '<h3>' + desc + '</h3>' +
-                            '<p><span class="glyphicon glyphicon-time"></span>' + severity + '</p>' +
-                            '<p><span class="glyphicon glyphicon-user"></span>' + assignedTo + '</p>' +
-                            '<a href="#" onclick="setStatusClosed(\''+id+'\')" class="btn btn-warning">Close</a>' +
-                            '<a href="#" onclick="deleteIssue(\''+id+'\')" class="btn btn-danger">Delete</a>' +
-                            '</div>';
+    issuesList.innerHTML +=   '<div class="well">'+
+                              '<h6>Issue ID: ' + id + '</h6>'+
+                              '<p><span class="label label-info">' + status + '</span></p>'+
+                              '<h3>' + desc + '</h3>'+
+                              '<p><span class="glyphicon glyphicon-time"></span> ' + severity + ' '+
+                              '<span class="glyphicon glyphicon-user"></span> ' + assignedTo + '</p>'+
+                              '<a href="#" class="btn btn-warning" onclick="setStatusClosed(\''+id+'\')">Close</a> '+
+                              '<a href="#" class="btn btn-danger" onclick="deleteIssue(\''+id+'\')">Delete</a>'+
+                              '</div>';
   }
-
 }
