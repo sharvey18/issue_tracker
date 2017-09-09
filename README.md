@@ -1,12 +1,7 @@
-Scotch Box With Phpmyadmin
+Issue Tracker | Web Application
 ==========
 
-This is a  one on one copy of Scotchbox. The only difference is that it installs phpmyadmin on the server automatically.
+This is a  test project that is made with pure Javascript, it sets issues to your browsers localStorage and
+then you're able to delete or update the status of the issue.
 
-Check out the official docs at: https://box.scotch.io
-
-==========
-
-Additions to index.php
- + Scanning for files 
- + Shortcut to phpmyadmin location 
+Check it out in action at: http://issue-tracker.scharvey.com
